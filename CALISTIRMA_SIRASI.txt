@@ -1,0 +1,446 @@
+================================================================================
+ ASM1 . CURRICULUM LEARNING + PINN  --  CALISTIRMA SIRASI
+================================================================================
+
+ Bu dosya hangi komutu hangi sirayla calistiracagini soyler.
+ Ayrintili aciklama, cikti yorumu ve hata giderme icin: RUNBOOK.md
+
+ CALISMA DIZINI (her komut buradan calisir):
+   proje koku (bu deponun klonlandigi dizin)
+
+ ALTIN KURAL:
+   Bir adim FAIL verirse SONRAKI ADIMA GECME.
+   Her kapi, kendisinden sonraki adimin dayandigi bir varsayimi dogruluyor.
+
+ DEGISMEYEN DOSYALAR (hicbir adim bunlara dokunmaz, salt okunur):
+   asm1.xlsx
+   asm1_cl-pinn\        (Obsidian vault)
+   tools\
+
+
+================================================================================
+ OZET  --  SIRAYLA 10 ADIM
+================================================================================
+
+  #   KOMUT                                             SURE
+ ---  ------------------------------------------------  ------------
+  0   ortam kurulumu (asagida 4 komut)                  5-15 dk
+  1   python -m scripts.verify_vault                    < 5 sn
+  2   python -m pytest tests -q                         1-3 dk
+  3   python -m scripts.verify_solver                   5-15 dk
+  4   python -m scripts.generate_data                   3-8 dk
+  5   python -m pytest tests -q                         1-3 dk
+  6   python -m scripts.verify_model                    5-15 dk
+  7   python -m scripts.run_all --profile quick         40-70 dk
+  8   python -m scripts.make_report                     < 1 dk
+  9   python -m scripts.run_all --profile full          4-7 saat
+ 10   python -m scripts.make_report                     < 1 dk
+
+ Adim 7+8 = boru hattinin uctan uca calistigini ucuza kanitlar.
+ Adim 9+10 = rapora girecek gercek sayilar.
+
+
+================================================================================
+ ADIM 0  --  ORTAM KURULUMU        (bir kez)
+================================================================================
+
+ numpy / scipy / torch sistemde KURULU DEGIL.
+ GPU: NVIDIA RTX 4050 Laptop, 6 GB, surucu 610.74  ->  CUDA 12.4 build.
+
+ 1) uv venv --python 3.11
+
+ 2) .venv\Scripts\Activate.ps1
+
+ 3) uv pip install torch --index-url https://download.pytorch.org/whl/cu124
+    (~2.5 GB indirir)
+
+ 4) uv pip install -r requirements.txt
+
+ GECME OLCUTU:
+    python -c "import torch; print(torch.cuda.is_available())"
+    -> True yazmali.
+
+ True cikmazsa: CPU'da da calisir ama adim 9 birkac kat uzar.
+ configs\base.yaml icinde  device: cpu  yap.
+
+ NOT: Her yeni terminalde once .venv\Scripts\Activate.ps1 calistir.
+
+
+================================================================================
+ ADIM 1  --  VAULT DOGRULAMASI
+================================================================================
+
+    python -m scripts.verify_vault
+
+ NE YAPAR
+   data/asm1.json SHA-256'sini vault'un kendi Audit Report.md dosyasindaki
+   denetlenmis degerle karsilastirir. Sonra 25 parametrenin ve 8x14
+   stokiyometri matrisinin her hucresini vault'un Markdown gorunumleriyle
+   tek tek karsilastirir. Son olarak nu @ C sureklilik kalintisini
+   yeniden hesaplar.
+
+ GECME OLCUTU
+   Son satir:  PASS - steps 1 and 2 clear
+   Fark sayisi 0
+   max kalinti 5.5511151231257827e-17,  tolerans 1e-15
+
+ FAIL OLURSA
+   Vault dosyalari degismis. asm1_cl-pinn\ altini ELLE DUZELTME.
+   tools\build_asm1_vault.py ile yeniden uret, Audit Report.md'yi guncelle.
+   Bu kapi gecmeden hicbir sayi guvenilir degil.
+
+
+================================================================================
+ ADIM 2  --  BIRIM TESTLERI
+================================================================================
+
+    python -m pytest tests -q
+
+ NE YAPAR
+   Vault sozlesmesi, kinetik ifadeler, tesis geometrisi, influent ureteci,
+   sensor modeli, curriculum zamanlayici, kayip terimleri, sizinti disiplini.
+
+ SIZINTI TESTI IKI KATMANLI
+   STATIK katman   veri gerektirmez, HER ZAMAN kosar.
+                   Kaynagi tokenize eder (docstring/yorum sayilmaz),
+                   src/train/ ve src/models/ altindaki TUM modullerde
+                   truth_reactor / truth_y erisiminin tam olarak [0] oldugunu
+                   dogrular. Ayrica src/ genelinde ground truth'a dokunan her
+                   dosyanin siniflandirilmis olmasini sart kosar - yeni bir
+                   dosya sessizce eklenemez.
+   CALISMA-ZAMANI  veri ister. Bu adimda SKIP verir. Normal.
+                   Adim 5'te gercekten kosacak.
+
+ GECME OLCUTU
+   Hepsi passed veya skipped. Hic failed yok.
+
+ EN KRITIK 4 TEST
+   test_physics_residual_vanishes_on_the_true_dynamics
+       Gercek dinamik beslendiginde fizik kalintisi sifir olmali.
+       Gecmiyorsa PINN'in ogrendigi her sey yanlis olur.
+   test_plant_rhs_honours_reaction_scale
+       Torch fizik terimi ile NumPy veri ureteci ayni denklemi kullaniyor mu.
+   test_budget_parity_between_curriculum_and_baseline
+       CL ile CL'siz kosular ayni toplam adim butcesini aliyor mu.
+   test_physics_weight_is_never_zero
+       Tam PINN garantisi: lambda_physics hicbir adimda sifir degil.
+
+
+================================================================================
+ ADIM 3  --  COZUCU DOGRULAMA KAPISI
+================================================================================
+
+    python -m scripts.verify_solver
+
+ NE YAPAR
+   200 gunluk isinmayi kosar (100 gun 20 C'de yetmiyor; WARMUP_DAYS = 200),
+   sonra alti kapi:
+
+     3a  BDF vs Radau vs LSODA
+         reaktor + cozunenler 1e-6, coktürücü katilari 1e-4
+     3b  rtol 1e-8 -> 1e-10 -> 1e-12 yakinsamasi
+         reaktor + cozunenler 1e-6, coktürücü katilari 1e-4
+     3c  reaksiyon kapali + geri devir kapali, matris usteli
+         (scipy.linalg.expm) ile karsilastirma                  tol 1e-6
+     3d  izleyici kutle korunumu:
+         S_I (reaksiyon ACIK)                                   tol 1e-8
+         X_I (reaksiyon KAPALI)                                 tol 1e-8
+         X_I (reaksiyon ACIK, eq. 46 yaklasimi)                 tol 5e-2
+     3e  isinma sonrasi ||dy/dt|| / ||y||                       tol 1e-6
+     3f  farkli baslangic tohumu -> ayni denge noktasi          tol 1e-6
+
+   Coktürücü katilarinin ayri (gevsek) toleransi Takacs modelinin parcali-
+   surekli RHS'inin belgelenmis ozelligidir; X_I reaksiyon-acik siniri ise
+   BSM1 eq. 46 yaklasiminin olculen buyuklugudur, cozucu hatasi degildir.
+
+ NEDEN BSM1 TABLO 6 KARSILASTIRMASI YOK
+   Bu proje 20 C vault parametreleriyle calisir; BSM1 Tablo 6 ise 15 C
+   setiyle uretilmistir. 3c ve 3d sicakliktan tamamen bagimsiz ve solve_ivp
+   ile hic kod paylasmayan referanslardir.
+
+ GECME OLCUTU
+   PASS - step 3 clear
+
+ FAIL OLURSA
+   3a / 3b  -> SolverSettings toleranslarini sikilastir; sistem beklenenden
+               daha stiff olabilir.
+   3c       -> src/asm1/plant.py tasinim (transport) terimlerinde hata var.
+   3d       -> coktürücü kutle dengesinde hata var; _settler_streams ve
+               BSM1 eq. 34-44 uygulamasina bak.
+   3e       -> 200 gun yetmemis; src/data/simulate.py WARMUP_DAYS artir.
+
+
+================================================================================
+ ADIM 4  --  SENTETIK VERI URETIMI
+================================================================================
+
+    python -m scripts.generate_data
+
+ NE YAPAR
+   Tek bir 200 gunluk isinmadan uc senaryo turetir, her birini dort gurultu
+   seviyesinde sensor veri setine cevirir.
+
+ URETIR  ->  results\raw\
+
+     sim_constant.npz  sim_dry.npz  sim_rain.npz     ground truth
+     obs_constant_sigma0p00 / 0p05 / 0p10 / 0p15     curriculum asama 1
+     obs_dry_sigma0p00 / 0p05 / 0p10 / 0p15          egitim + holdout
+     obs_rain_sigma0p00 / 0p05 / 0p10 / 0p15         dagilim kaymasi testi
+     manifest.json                                   provenance
+
+ GECME OLCUTU
+   PASS - steps 4 and 5 complete
+
+ EKRANDA AYRICA SUNLARA BAK
+   Reaktor COD/N kapanisi -> 1e-6'dan kucuk olmali; script bunu KAPILAR.
+                             Buyukse coktürücü kutle dengesinde sizinti var.
+   Tesis geneli kapanis   -> sadece RAPORLANIR, kapilanmaz. BSM1 eq. 46
+                             coktürücü yaklasimi yuzunden N tarafinda ~1e-3
+                             gorulebilir; beklenen davranistir, hata degil.
+   Debi ortalamasi        -> 18446'ya cok yakin.
+                             Aralik 10000-32000'e yakin (birebir degil:
+                             ortalama ve max/min orani tam sabitlenmistir,
+                             mutlak uclar yaklasiktir - bu kasitli).
+   Kirpma orani           -> "clipped ... % of samples".
+                             Gurultu carpimsal: z*(1+eps). Kirpma icin
+                             eps < -1 gerekir; sigma=0.15'te bile beklenen
+                             deger ~0'dir (6.7 sigma'lik olay). Belirgin
+                             sekilde sifirdan buyukse anormaldir; raporda
+                             belirt.
+   Tank 3-4 DO            -> 20 C'de oksijen tuketimi yuksek. BSM1'in sabit
+                             KLa=240 /d degeri DO'yu dusurebilir. Duserse
+                             OLDUGU GIBI raporla; KLa uydurma.
+
+
+================================================================================
+ ADIM 5  --  TESTLERI TEKRAR KOS       (veri uretildikten sonra)
+================================================================================
+
+    python -m pytest tests -q
+
+ NEDEN TEKRAR
+   tests/test_leakage.py calisma-zamani katmani artik SKIP yerine gercekten
+   kosar. t > 0 sonrasi TUM ground truth'u NaN yapar ve sunlarin hala sonlu
+   kaldigini dogrular:
+     - her curriculum asamasinda
+     - hem dry hem constant veri setinde
+     - hem cl_pinn hem cl_lstm mimarisinde
+     - fizik / kolokasyon yolu dahil
+     - ileri kayip VE geri gradyanlar
+   Yani olculmeyen 11 bilesenin ground truth'u optimize ediciye hic girmiyor.
+
+ SKIP SESSIZ GECMESIN ISTIYORSAN  (strict mod)
+   Veri eksikse SKIP yerine FAIL verir:
+
+     PowerShell:   $env:ASM1_STRICT_TESTS=1; python -m pytest tests -q
+     Bash:         ASM1_STRICT_TESTS=1 python -m pytest tests -q
+
+   Sonra temizle:  Remove-Item Env:\ASM1_STRICT_TESTS
+
+ GECME OLCUTU
+   Hic failed yok. Onceki SKIP artik PASSED.
+
+
+================================================================================
+ ADIM 6  --  MODEL DOGRULAMASI
+================================================================================
+
+    python -m scripts.verify_model
+
+ NE YAPAR
+   CPU'da float64 ile kucuk deneme modelleri egitip dort kapi kontrol eder:
+
+     6a  autograd turevi  <->  merkezi sonlu fark              < 1e-4
+     6b  forward-mode JVP <->  reverse-mode VJP                < 1e-6
+     6c  fizik kalintisinin gradyani sifir degil
+         VE fizik acikken kalinti kapaliya gore kucuk
+     6d  t > 0 sonrasi tum ground truth NaN yapilinca
+         kayip hala sonlu
+
+   6c = "tam PINN" iddiasinin kaniti (fizik terimi grafige gercekten bagli).
+   6d = soft-sensor kurulumunun durustlugunun kaniti.
+
+ GECME OLCUTU
+   PASS - step 6 clear
+
+ FAIL OLURSA
+   6a / 6b  -> configs\base.yaml icinde  pinn.derivative_mode: reverse  yap,
+               tekrar dene. Forward-mode bu torch surumunde parametre
+               grafigini tasimiyor olabilir.
+   6c       -> src/models/losses.py physics_residual ile src/train/run.py
+               toplama arasinda baglanti kopmus.
+   6d       -> Egitim yolunda olculmeyen durumdan besleniyorsun;
+               tests/test_leakage.py hangi satir oldugunu soyler.
+
+
+================================================================================
+ ADIM 7  --  HIZLI SUPURME     (boru hatti kontrolu)
+================================================================================
+
+ Once ne kosacagini gor (hicbir sey egitilmez):
+
+    python -m scripts.run_all --profile quick --list
+
+ Sonra kos:
+
+    python -m scripts.run_all --profile quick
+
+ NE YAPAR
+   16 kosu = 4 model x 4 gurultu seviyesi, her biri 4000 adim.
+   Amac sonuc uretmek DEGIL - her kombinasyonun cokmeden sonuna kadar
+   gittigini gormek.
+
+     MODELLER                     GURULTU
+     cl_pinn   PINN + curriculum  0.00
+     pinn      PINN, CL yok       0.05
+     cl_lstm   LSTM + curriculum  0.10
+     lstm      LSTM, CL yok       0.15
+
+ URETIR  ->  results\runs\<model>_sigma<xx>\
+     checkpoint.pt  history.json  predictions.npz  summary.json  config.yaml
+   ve  results\runs\sweep_index.json
+
+ GECME OLCUTU
+   16 succeeded, 0 failed
+
+ YARIDA KESERSEN
+    python -m scripts.run_all --profile quick --resume
+
+ FAIL OLURSA
+   Ilgili kosunun klasorunde error.txt var. En olasi iki neden:
+     - GPU bellegi        -> configs\base.yaml  collocation_points  dusur
+     - float32 tasmasi    -> configs\base.yaml  dtype: float64  (yavaslar)
+
+
+================================================================================
+ ADIM 8  --  ARA RAPOR
+================================================================================
+
+    python -m scripts.make_report
+
+ results\benchmark.md dosyasini ac.
+
+ BU NOKTADA SAYILAR ANLAMLI DEGIL (4000 adim az).
+ Sadece sunlari dogrula:
+   - Tablolar dolu mu
+   - Track A / Track B ayrimi goruniyor mu
+   - results\figures\ altinda grafikler uretilmis mi
+ Bos hucre varsa o kosu basarisiz olmustur.
+
+
+================================================================================
+ ADIM 9  --  TAM SUPURME       (raporlanacak kosular)
+================================================================================
+
+    python -m scripts.run_all --profile full
+
+ SURE
+   16 kosu, RTX 4050'de tahmini 4-7 saat.
+   Gece birakacaksan Windows'un uyku moduna gecmedigine emin ol.
+
+ KESILIRSE
+    python -m scripts.run_all --profile full --resume
+
+ TEK TEK KOSMAK ISTERSEN
+    python -m scripts.run_all --profile full --models cl_pinn --noise 0.10
+
+ GECME OLCUTU
+   16 succeeded, 0 failed
+
+
+================================================================================
+ ADIM 10  --  NIHAI RAPOR
+================================================================================
+
+    python -m scripts.make_report
+
+ URETIR
+   results\benchmark.csv            model x gurultu x degerlendirme kumesi
+   results\benchmark.md             Track A / Track B tablolari
+   results\benchmark_detail.json    bilesen bazinda tum metrikler
+   results\figures\loss_curves.png
+   results\figures\noise_robustness.png
+
+ NASIL OKUNACAK
+
+   TRACK A  (olculen bilesenler: S_O, S_NH, S_NO)
+       Dort modelin adil karsilastirmasi.
+       LSTM'lerin burada rekabetci olmasi BEKLENIR.
+
+   TRACK B  (olculmeyen 11 bilesen: S_I, S_S, X_I, X_S, X_B_H, X_B_A,
+             X_P, S_ND, X_ND, S_ALK, S_N2)
+       ASIL SONUC BURASI.
+       lstm ve cl_lstm burada hicbir egitim sinyaline sahip degil.
+       Sayilari baslangic olcegini yansitir, bir uydurma degil.
+       Rapor bunu dipnotla belirtiyor.
+
+   SATIRLAR
+       train    egitim penceresi, gun 0-12
+       holdout  egitimde gorulmeyen son 2 gun
+       rain     hic gorulmemis yagmur senaryosu (tepe ~52000 m3/gun)
+       Fizik teriminin degeri en cok holdout ve rain'de gorunur.
+
+   SUTUNLAR
+       sigma 0.00 -> 0.15 boyunca hangi modelin ne kadar bozuldugu.
+
+
+================================================================================
+ SIK KULLANILACAK YARDIMCILAR
+================================================================================
+
+ Tek bir kosuyu dogrudan calistir:
+    python -m src.train.run results\runs\cl_pinn_sigma0p10\config.yaml
+
+ Sadece testleri kos:
+    python -m pytest tests -q
+
+ Testleri strict modda kos (eksik veri = FAIL, SKIP degil):
+    $env:ASM1_STRICT_TESTS=1; python -m pytest tests -q
+
+ Skip sebeplerini gor:
+    python -m pytest tests -q -rs
+
+ Tek bir test dosyasi:
+    python -m pytest tests\test_losses.py -q
+
+ Veriyi tek senaryo icin yeniden uret:
+    python -m scripts.generate_data --scenarios dry
+
+ Kosu planini gor, hicbir sey egitme:
+    python -m scripts.run_all --profile full --list
+
+
+================================================================================
+ SIFIRDAN BASLAMAK
+================================================================================
+
+ results\ klasorunu silmek her seyi bastan uretilebilir hale getirir.
+ Vault ve asm1.xlsx hicbir adimda degistirilmez.
+
+ PowerShell:
+    Remove-Item -Recurse -Force results\raw, results\runs, results\figures
+    Remove-Item results\benchmark.*
+
+ Sonra ADIM 1'den devam et.
+
+
+================================================================================
+ HATIRLATMALAR
+================================================================================
+
+ - Tek sicaklik: 20 C. Kodda sicaklik anahtari, Arrhenius duzeltmesi veya
+   alternatif parametre seti YOK. Tek kaynak: asm1_cl-pinn\data\asm1.json
+
+ - Uretilen veri BSM1 Tablo 6'yi YENIDEN URETMEZ ve URETMEMELIDIR.
+   20 C kinetigi daha hizlidir, farkli bir denge noktasina oturur.
+   Bu bir hata degil, tanim geregi beklenen sonuctur.
+
+ - BSM1'den yalnizca geometri, akislar ve giris bilesimi alindi
+   (bunlar sicakliktan bagimsiz). BSM1'in kinetik parametreleri KULLANILMADI.
+
+ - Havalandirma BSM1 acik-cevrim varsayilani:
+   KLa_3 = KLa_4 = 240 /d,  KLa_5 = 84 /d.
+   Kapali-cevrim PI kazanclari BSM1 raporunda yayinlanmadigi icin
+   kullanilmadi - uydurmak yerine yayinlanmis degeri aldik.
+
+================================================================================

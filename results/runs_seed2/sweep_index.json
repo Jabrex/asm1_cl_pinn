@@ -1,0 +1,15 @@
+{
+  "profile": "full",
+  "succeeded": [
+    "cl_pinn_sigma0p00",
+    "cl_pinn_sigma0p05",
+    "cl_pinn_sigma0p10",
+    "cl_pinn_sigma0p15",
+    "pinn_sigma0p00",
+    "pinn_sigma0p05",
+    "pinn_sigma0p10",
+    "pinn_sigma0p15"
+  ],
+  "failed": [],
+  "sweep_seconds": 4398.281710399999
+}

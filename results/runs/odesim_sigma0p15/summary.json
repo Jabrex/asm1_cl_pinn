@@ -1,0 +1,17 @@
+{
+  "run_id": "odesim_sigma0p15",
+  "model": "ode_openloop",
+  "arch": "analytic",
+  "curriculum": "none",
+  "noise": 0.15,
+  "seed": 0,
+  "profile": "full",
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "steps": 0,
+  "train_seconds": 68.64268439999432,
+  "n_parameters": 0
+}

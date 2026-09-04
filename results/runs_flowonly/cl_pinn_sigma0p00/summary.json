@@ -1,0 +1,137 @@
+{
+  "run_id": "cl_pinn_sigma0p00",
+  "model": "cl_pinn",
+  "arch": "pinn",
+  "curriculum": "hierarchical",
+  "noise": 0.0,
+  "seed": 0,
+  "ic_measured_only": false,
+  "profile": "full",
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "steps": 20000,
+  "schedule": [
+    {
+      "name": "stage1",
+      "dataset": "constant",
+      "horizon_days": 1.0,
+      "steps": 3000,
+      "smoothing_window": 1,
+      "weights_start": {
+        "data": 10.0,
+        "physics": 0.05,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.0
+      },
+      "weights_end": {
+        "data": 7.75,
+        "physics": 0.2875,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.025
+      }
+    },
+    {
+      "name": "stage2",
+      "dataset": "dry",
+      "horizon_days": 3.0,
+      "steps": 4000,
+      "smoothing_window": 1,
+      "weights_start": {
+        "data": 7.75,
+        "physics": 0.2875,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.025
+      },
+      "weights_end": {
+        "data": 5.5,
+        "physics": 0.525,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.05
+      }
+    },
+    {
+      "name": "stage3",
+      "dataset": "dry",
+      "horizon_days": 7.0,
+      "steps": 5000,
+      "smoothing_window": 1,
+      "weights_start": {
+        "data": 5.5,
+        "physics": 0.525,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.05
+      },
+      "weights_end": {
+        "data": 3.25,
+        "physics": 0.7625,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.07500000000000001
+      }
+    },
+    {
+      "name": "stage4",
+      "dataset": "dry",
+      "horizon_days": 12.0,
+      "steps": 8000,
+      "smoothing_window": 1,
+      "weights_start": {
+        "data": 3.25,
+        "physics": 0.7625,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.07500000000000001
+      },
+      "weights_end": {
+        "data": 1.0,
+        "physics": 1.0,
+        "ic": 10.0,
+        "positivity": 1.0,
+        "balance": 0.1
+      }
+    }
+  ],
+  "device": "cuda",
+  "dtype": "float32",
+  "n_parameters": 76998,
+  "train_seconds": 528.1005715999927,
+  "peak_gpu_bytes": 29037568,
+  "final_losses": {
+    "step": 19999,
+    "stage": "stage4",
+    "lr": 2e-05,
+    "total": 0.02327376790344715,
+    "data": 0.006435435730963945,
+    "physics": 0.013536128215491772,
+    "ic": 0.00032804461079649627,
+    "positivity": 0.0,
+    "balance": 0.00021757304784841835,
+    "w_data": 1.0,
+    "w_physics": 1.0,
+    "w_ic": 10.0,
+    "w_positivity": 1.0,
+    "w_balance": 0.1
+  },
+  "unobserved_components": [
+    "S_I",
+    "S_S",
+    "X_I",
+    "X_S",
+    "X_B_H",
+    "X_B_A",
+    "X_P",
+    "S_ND",
+    "X_ND",
+    "S_ALK",
+    "S_N2"
+  ],
+  "vault_json_sha256": "06f7bfd5ce5703f5745cc0565858fc147012e68b3e28fdca64a126e6ed7074a2"
+}

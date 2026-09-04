@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "succeeded": [
+    "cl_pinn_sigma0p00",
+    "cl_pinn_sigma0p05",
+    "cl_pinn_sigma0p10",
+    "cl_pinn_sigma0p15",
+    "pinn_sigma0p00",
+    "pinn_sigma0p05",
+    "pinn_sigma0p10",
+    "pinn_sigma0p15",
+    "cl_lstm_sigma0p00",
+    "cl_lstm_sigma0p05",
+    "cl_lstm_sigma0p10",
+    "cl_lstm_sigma0p15",
+    "lstm_sigma0p00",
+    "lstm_sigma0p05",
+    "lstm_sigma0p10",
+    "lstm_sigma0p15"
+  ],
+  "failed": [],
+  "sweep_seconds": 5635.8292916
+}

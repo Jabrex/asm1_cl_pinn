@@ -1,0 +1,15 @@
+{
+  "profile": "full",
+  "succeeded": [
+    "cl_pinn_wonly_sigma0p00",
+    "cl_pinn_wonly_sigma0p10",
+    "cl_pinn_honly_sigma0p00",
+    "cl_pinn_honly_sigma0p10",
+    "cl_pinn_sonly_sigma0p00",
+    "cl_pinn_sonly_sigma0p10",
+    "cl_pinn_smonly_sigma0p00",
+    "cl_pinn_smonly_sigma0p10"
+  ],
+  "failed": [],
+  "sweep_seconds": 4349.574019599997
+}
