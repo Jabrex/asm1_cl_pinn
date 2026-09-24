@@ -1,0 +1,15 @@
+{
+  "out_dir": "results/v11/anchors/k100_lab/r04",
+  "anchors": {
+    "Al1": {
+      "file": "results/v11/anchors/k100_lab/r04/Al1.npz",
+      "rms_log_error_vs_truth0": 0.41096856925293274,
+      "median_rel_std": 0.723895202039332
+    },
+    "Al2": {
+      "file": "results/v11/anchors/k100_lab/r04/Al2.npz",
+      "rms_log_error_vs_truth0": 0.40556289253976524,
+      "median_rel_std": 0.7238952020393319
+    }
+  }
+}
