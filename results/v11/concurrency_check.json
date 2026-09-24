@@ -1,0 +1,13 @@
+{
+  "workers": 2,
+  "max_rel_diff": 0.0,
+  "deterministic": true,
+  "throughput_gain": 1.7911563870668148,
+  "rel_tol": 1e-05,
+  "min_gain": 1.25,
+  "solo_seconds": 109.83769050001865,
+  "pair_seconds": [
+    121.96557520001079,
+    122.64444500001264
+  ]
+}
