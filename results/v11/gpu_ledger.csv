@@ -1,0 +1,2 @@
+run_id,phase,run_dir,attempt,model,profile,sigma,seed,minutes,eq,status,workers,recorded_utc
+cl_pinn_sigma0p10,g1_smoke,results/v11/_smoke_g1/cl_pinn_sigma0p10,1,cl_pinn,quick,0.10,0,1.93,0.20,ok,1,2026-09-24T16:30:12Z
