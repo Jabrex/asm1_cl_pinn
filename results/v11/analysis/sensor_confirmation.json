@@ -1,0 +1,94 @@
+{
+ "drop": "TSS_tank5",
+ "add": "S_NH_tank4",
+ "drop_delta_J": 0.021605296561464343,
+ "add_delta_J": 0.01578550070268278,
+ "criterion": "J = mean IG over never-measured (tank, component) entries",
+ "source": "results/raw_k100",
+ "prior": "results/v11/anchors/k100/As.npz",
+ "sigma": 0.1,
+ "drop_ranking": [
+  {
+   "name": "TSS_tank5",
+   "delta_J": 0.021605296561464343
+  },
+  {
+   "name": "S_NH_tank5",
+   "delta_J": 0.014005846513085896
+  },
+  {
+   "name": "S_O_tank5",
+   "delta_J": 0.012952900817314011
+  },
+  {
+   "name": "S_O_tank3",
+   "delta_J": 0.01285065456454626
+  },
+  {
+   "name": "S_O_tank4",
+   "delta_J": 0.00817286362044048
+  },
+  {
+   "name": "S_NO_tank2",
+   "delta_J": 0.006336442186999053
+  },
+  {
+   "name": "S_NO_tank5",
+   "delta_J": 0.0043488026996369444
+  }
+ ],
+ "add_ranking": [
+  {
+   "name": "S_NH_tank4",
+   "sigma": 0.1,
+   "delta_J": 0.01578550070268278
+  },
+  {
+   "name": "TSS_tank1",
+   "sigma": 0.1,
+   "delta_J": 0.011990087318007242
+  },
+  {
+   "name": "S_NO_tank3",
+   "sigma": 0.1,
+   "delta_J": 0.00950739897182204
+  },
+  {
+   "name": "S_NH_tank3",
+   "sigma": 0.1,
+   "delta_J": 0.008246071938443511
+  },
+  {
+   "name": "S_NO_tank1",
+   "sigma": 0.1,
+   "delta_J": 0.005358993023619529
+  },
+  {
+   "name": "S_NO_tank4",
+   "sigma": 0.1,
+   "delta_J": 0.00516110356509894
+  },
+  {
+   "name": "S_NH_tank1",
+   "sigma": 0.1,
+   "delta_J": 0.004210516859765784
+  },
+  {
+   "name": "S_NH_tank2",
+   "sigma": 0.1,
+   "delta_J": 0.0032656740153876873
+  },
+  {
+   "name": "SCOD_tank1",
+   "sigma": 0.2,
+   "delta_J": 0.0017086853114372802
+  },
+  {
+   "name": "SCOD_tank5",
+   "sigma": 0.2,
+   "delta_J": 0.0003637695759561299
+  }
+ ],
+ "confirmation_cell": "K1-Ie-A0 (configs/regime/k100_ie_a0_sensors.yaml, G5)",
+ "git_commit": "5561bc28ef1acdf9e82e5054cd8a9644187abff7"
+}
