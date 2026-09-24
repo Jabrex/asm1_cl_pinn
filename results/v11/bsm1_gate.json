@@ -1,5 +1,6 @@
 {
   "status": "pass",
+  "passed": true,
   "wording": "BSM1 15 C kinetic set",
   "reference": {
     "source": "Alex, J., Benedetti, L., Copp, J., Gernaey, K.V., Jeppsson, U., Nopens, I., Pons, M.-N., Rieger, L., Rosen, C., Steyer, J.P., Vanrolleghem, P., Winkler, S. (2008). Benchmark Simulation Model no. 1 (BSM1). Report LTH-IEA-7229, CODEN:LUTEDX/(TEIE-7229)/1-62/(2008), Dept. of Industrial Electrical Engineering and Automation, Lund University. Prepared by the IWA Taskgroup on Benchmarking of Control Strategies for WWTPs, April 2008. https://www2.iea.lth.se/publications/Reports/LTH-IEA-7229.pdf",
