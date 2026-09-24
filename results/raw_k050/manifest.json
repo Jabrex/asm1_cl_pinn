@@ -1,0 +1,492 @@
+{
+  "argv": [
+    "--out",
+    "results/raw_k050",
+    "--truth-preset",
+    "graded",
+    "--alpha",
+    "0.50",
+    "--constant-from",
+    "nominal",
+    "--candidate-channels"
+  ],
+  "vault_json_sha256": "06f7bfd5ce5703f5745cc0565858fc147012e68b3e28fdca64a126e6ed7074a2",
+  "source_xlsx_sha256": "dff2424c5fa1ed83846ebac7269ac3284317dc8799f18d7edaabb18d60ba892a",
+  "truth_preset": "graded",
+  "alpha": 0.5,
+  "parameters": {
+    "YH": 0.67,
+    "fP": 0.08,
+    "YA": 0.24,
+    "iXB": 0.08299999999999999,
+    "iXP": 0.06,
+    "iNO3_N2": 2.857142857142857,
+    "iCOD_NO3": -4.571428571428571,
+    "iCOD_N2": -1.7142857142857142,
+    "iCharge_SNHx": 0.07142857142857142,
+    "iCharge_SNOx": -0.07142857142857142,
+    "kh": 3.0,
+    "KX": 0.0547722557505166,
+    "etah": 0.565685424949238,
+    "muH": 4.898979485566356,
+    "etag": 0.8,
+    "Ks": 14.142135623730955,
+    "bH": 0.43127717305695645,
+    "KO_H": 0.2,
+    "KNO": 0.5,
+    "KNH_H": 0.025,
+    "muA": 0.6324555320336759,
+    "bA": 0.08660254037844389,
+    "ka": 0.0632455532033676,
+    "KO_A": 0.4,
+    "KNH": 1.0
+  },
+  "log_multipliers": null,
+  "constant_from": "nominal",
+  "offsteady_days": 0.0,
+  "noise_levels": [
+    0.0,
+    0.05,
+    0.1,
+    0.15
+  ],
+  "noise_seed_rule": "seed + 1000*k (k = index in NOISE_LEVELS) + 100000*r",
+  "seed": 0,
+  "sensor_channels": [
+    "S_O_tank3",
+    "S_O_tank4",
+    "S_O_tank5",
+    "S_NH_tank5",
+    "S_NO_tank2",
+    "S_NO_tank5",
+    "TSS_tank5",
+    "TSS_ras",
+    "S_NH_tank1",
+    "S_NH_tank2",
+    "S_NH_tank3",
+    "S_NH_tank4",
+    "S_NO_tank1",
+    "S_NO_tank3",
+    "S_NO_tank4",
+    "TSS_tank1",
+    "SCOD_tank1",
+    "SCOD_tank5"
+  ],
+  "extra_channels": [
+    "S_NH_tank1",
+    "S_NH_tank2",
+    "S_NH_tank3",
+    "S_NH_tank4",
+    "S_NO_tank1",
+    "S_NO_tank3",
+    "S_NO_tank4",
+    "TSS_tank1",
+    "SCOD_tank1",
+    "SCOD_tank5"
+  ],
+  "noise_realisations": 1,
+  "realisation_sigmas": [
+    0.1
+  ],
+  "closure_gate": 1e-06,
+  "closure_refine_factor": 4,
+  "openblas_num_threads": "4",
+  "steady_state_reactor": [
+    [
+      30.0,
+      3.628160742310971,
+      1144.2746058911566,
+      72.0282465295113,
+      2130.2748465825744,
+      126.30950016714309,
+      537.5868957197627,
+      0.00308477830158252,
+      5.332673180474707,
+      8.215257319428614,
+      1.18857081106183,
+      4.739918155565808,
+      4.951613152782424,
+      25.632427785353645
+    ],
+    [
+      30.0,
+      1.960554355447121,
+      1144.2746058909904,
+      68.53464233834086,
+      2129.9852264800647,
+      126.19109435391084,
+      538.3931778199972,
+      4.4191774477359636e-05,
+      3.6664891772501926,
+      8.633033843704057,
+      0.8358046971748445,
+      4.6600400187652244,
+      5.100467476175277,
+      27.298968739970263
+    ],
+    [
+      30.0,
+      2.0284508476885783,
+      1144.2746058907676,
+      53.6211756220078,
+      2134.924818394924,
+      126.79142367100971,
+      539.4704751487203,
+      1.334636813329562,
+      6.5139803466301345,
+      5.719978571778134,
+      0.936238980361435,
+      3.785585230409466,
+      4.688999873224859,
+      27.614102045692775
+    ],
+    [
+      30.0,
+      1.7310579180695282,
+      1144.2746058905445,
+      42.43804459386776,
+      2137.6038617108543,
+      127.35937550357448,
+      540.5491652796694,
+      1.935352951985342,
+      9.343923800051975,
+      3.063707522011358,
+      0.9022973513295175,
+      3.1108955886729763,
+      4.297127408711385,
+      27.814838907607303
+    ],
+    [
+      30.0,
+      1.4244713512406255,
+      1144.274605890322,
+      36.48999509515737,
+      2136.7836789362873,
+      127.56374888460962,
+      541.6274668829836,
+      0.35256237035239424,
+      10.210083544642968,
+      1.997687430782782,
+      0.7774090663017971,
+      2.7713820840747063,
+      4.159114563295701,
+      28.465515127318355
+    ]
+  ],
+  "start_reactor": [
+    [
+      30.0,
+      3.628160742310971,
+      1144.2746058911566,
+      72.0282465295113,
+      2130.2748465825744,
+      126.30950016714309,
+      537.5868957197627,
+      0.00308477830158252,
+      5.332673180474707,
+      8.215257319428614,
+      1.18857081106183,
+      4.739918155565808,
+      4.951613152782424,
+      25.632427785353645
+    ],
+    [
+      30.0,
+      1.960554355447121,
+      1144.2746058909904,
+      68.53464233834086,
+      2129.9852264800647,
+      126.19109435391084,
+      538.3931778199972,
+      4.4191774477359636e-05,
+      3.6664891772501926,
+      8.633033843704057,
+      0.8358046971748445,
+      4.6600400187652244,
+      5.100467476175277,
+      27.298968739970263
+    ],
+    [
+      30.0,
+      2.0284508476885783,
+      1144.2746058907676,
+      53.6211756220078,
+      2134.924818394924,
+      126.79142367100971,
+      539.4704751487203,
+      1.334636813329562,
+      6.5139803466301345,
+      5.719978571778134,
+      0.936238980361435,
+      3.785585230409466,
+      4.688999873224859,
+      27.614102045692775
+    ],
+    [
+      30.0,
+      1.7310579180695282,
+      1144.2746058905445,
+      42.43804459386776,
+      2137.6038617108543,
+      127.35937550357448,
+      540.5491652796694,
+      1.935352951985342,
+      9.343923800051975,
+      3.063707522011358,
+      0.9022973513295175,
+      3.1108955886729763,
+      4.297127408711385,
+      27.814838907607303
+    ],
+    [
+      30.0,
+      1.4244713512406255,
+      1144.274605890322,
+      36.48999509515737,
+      2136.7836789362873,
+      127.56374888460962,
+      541.6274668829836,
+      0.35256237035239424,
+      10.210083544642968,
+      1.997687430782782,
+      0.7774090663017971,
+      2.7713820840747063,
+      4.159114563295701,
+      28.465515127318355
+    ]
+  ],
+  "scenarios": {
+    "constant": {
+      "simulation": "sim_constant.npz",
+      "samples": 97,
+      "closure": {
+        "reactor_cod_closure": 6.133388027343568e-15,
+        "reactor_n_closure": 3.0457647254912094e-15,
+        "plant_cod_closure": 1.2859630193165847e-13,
+        "plant_n_closure": 3.3685476354842365e-13,
+        "gate_grid_days": 0.010416666666666666,
+        "gate_value": 6.133388027343568e-15,
+        "pass": true
+      },
+      "influent_summary": {
+        "scenario": "constant",
+        "flow_mean_achieved": 18446.0,
+        "flow_mean_target": 18446.0,
+        "source": "BSM1 Table 5 stabilisation load, held constant"
+      },
+      "meta_extra": {
+        "truth_preset": "vault20",
+        "alpha": 0.0,
+        "constant_from": "nominal",
+        "offsteady_days": 0.0,
+        "directory_truth_preset": "graded"
+      },
+      "observations": {
+        "0p00": {
+          "file": "obs_constant_sigma0p00.npz",
+          "sigma": 0.0,
+          "clip_fraction": 0.0,
+          "seed": 0
+        },
+        "0p05": {
+          "file": "obs_constant_sigma0p05.npz",
+          "sigma": 0.05,
+          "clip_fraction": 0.0,
+          "seed": 1000
+        },
+        "0p10": {
+          "file": "obs_constant_sigma0p10.npz",
+          "sigma": 0.1,
+          "clip_fraction": 0.0,
+          "seed": 2000
+        },
+        "0p15": {
+          "file": "obs_constant_sigma0p15.npz",
+          "sigma": 0.15,
+          "clip_fraction": 0.0,
+          "seed": 3000
+        }
+      }
+    },
+    "dry": {
+      "simulation": "sim_dry.npz",
+      "samples": 1345,
+      "closure": {
+        "reactor_cod_closure": 4.887989668068741e-07,
+        "reactor_n_closure": 4.467674471367496e-07,
+        "plant_cod_closure": 6.869592964765924e-07,
+        "plant_n_closure": 0.0006764139439655267,
+        "gate_grid_days": 0.010416666666666666,
+        "gate_value": 4.887989668068741e-07,
+        "pass": true
+      },
+      "influent_summary": {
+        "flow_mean_achieved": 18445.693224073202,
+        "flow_mean_target": 18446.0,
+        "flow_min_achieved": 10000.000000000136,
+        "flow_max_achieved": 31999.998094330036,
+        "flow_range_target": [
+          10000.0,
+          32000.0
+        ],
+        "S_S": {
+          "mean_achieved": 69.49927675014756,
+          "mean_target": 69.5,
+          "min_achieved": 55.00000000000001,
+          "max_achieved": 119.99998601084614,
+          "range_target": [
+            55.0,
+            120.0
+          ]
+        },
+        "S_NH": {
+          "mean_achieved": 31.55951082835645,
+          "mean_target": 31.56,
+          "min_achieved": 15.000013098428038,
+          "max_achieved": 44.999998880541256,
+          "range_target": [
+            15.0,
+            45.0
+          ]
+        },
+        "X_S": {
+          "mean_achieved": 202.3165652935203,
+          "mean_target": 202.32,
+          "min_achieved": 100.00000332163683,
+          "max_achieved": 299.99999079983377,
+          "range_target": [
+            100.0,
+            300.0
+          ]
+        }
+      },
+      "meta_extra": {
+        "truth_preset": "graded",
+        "alpha": 0.5,
+        "constant_from": "nominal",
+        "offsteady_days": 0.0
+      },
+      "observations": {
+        "0p00": {
+          "file": "obs_dry_sigma0p00.npz",
+          "sigma": 0.0,
+          "clip_fraction": 0.0,
+          "seed": 0
+        },
+        "0p05": {
+          "file": "obs_dry_sigma0p05.npz",
+          "sigma": 0.05,
+          "clip_fraction": 0.0,
+          "seed": 1000
+        },
+        "0p10": {
+          "file": "obs_dry_sigma0p10.npz",
+          "sigma": 0.1,
+          "clip_fraction": 0.0,
+          "seed": 2000
+        },
+        "0p15": {
+          "file": "obs_dry_sigma0p15.npz",
+          "sigma": 0.15,
+          "clip_fraction": 0.0,
+          "seed": 3000
+        }
+      }
+    },
+    "rain": {
+      "simulation": "sim_rain.npz",
+      "samples": 1345,
+      "closure": {
+        "reactor_cod_closure": 4.2233925157054016e-06,
+        "reactor_n_closure": 3.7075706691017864e-06,
+        "plant_cod_closure": 8.203079356820031e-07,
+        "plant_n_closure": 0.0008976386391280176,
+        "gate_grid_days": 0.0026041666666666665,
+        "gate_value": 1.0286723459374496e-07,
+        "refined": {
+          "reactor_cod_closure": 1.0286723459374496e-07,
+          "reactor_n_closure": 9.32279941723558e-08,
+          "plant_cod_closure": 2.770713652772505e-07,
+          "plant_n_closure": 0.000896412247545397
+        },
+        "pass": true
+      },
+      "influent_summary": {
+        "flow_mean_achieved": 20796.81483527806,
+        "flow_mean_target": 18446.0,
+        "flow_min_achieved": 10000.000000000136,
+        "flow_max_achieved": 52000.01620482786,
+        "flow_range_target": [
+          10000.0,
+          32000.0
+        ],
+        "S_S": {
+          "mean_achieved": 64.80327505388364,
+          "mean_target": 69.5,
+          "min_achieved": 19.338380413927602,
+          "max_achieved": 119.99998601084586,
+          "range_target": [
+            55.0,
+            120.0
+          ]
+        },
+        "S_NH": {
+          "mean_achieved": 29.446678684884816,
+          "mean_target": 31.56,
+          "min_achieved": 5.278486576626065,
+          "max_achieved": 44.99999888054124,
+          "range_target": [
+            15.0,
+            45.0
+          ]
+        },
+        "X_S": {
+          "mean_achieved": 188.79428544603974,
+          "mean_target": 202.32,
+          "min_achieved": 35.18435798132965,
+          "max_achieved": 299.9999907998335,
+          "range_target": [
+            100.0,
+            300.0
+          ]
+        },
+        "rain_peak_achieved": 52000.01620482786,
+        "rain_peak_target": 52000.0,
+        "flow_mean_note": "series mean includes the rain event; the Table 5 anchor applies to the dry-weather component only",
+        "dry_component_mean_achieved": 18445.693224073202
+      },
+      "meta_extra": {
+        "truth_preset": "graded",
+        "alpha": 0.5,
+        "constant_from": "nominal",
+        "offsteady_days": 0.0
+      },
+      "observations": {
+        "0p00": {
+          "file": "obs_rain_sigma0p00.npz",
+          "sigma": 0.0,
+          "clip_fraction": 0.0,
+          "seed": 0
+        },
+        "0p05": {
+          "file": "obs_rain_sigma0p05.npz",
+          "sigma": 0.05,
+          "clip_fraction": 0.0,
+          "seed": 1000
+        },
+        "0p10": {
+          "file": "obs_rain_sigma0p10.npz",
+          "sigma": 0.1,
+          "clip_fraction": 0.0,
+          "seed": 2000
+        },
+        "0p15": {
+          "file": "obs_rain_sigma0p15.npz",
+          "sigma": 0.15,
+          "clip_fraction": 0.0,
+          "seed": 3000
+        }
+      }
+    }
+  }
+}
