@@ -1,0 +1,434 @@
+{
+  "rule": "diverged = non-finite estimate, self-flagged divergence, or time-mean NIS (days 0-12) > 3.0 x measured channels; IEKS replaces EKS above 20 % of the 60 main-grid cells",
+  "ekf": {
+    "estimator": "ekf",
+    "n_cells": 60,
+    "n_diverged": 0,
+    "n_missing": 0,
+    "rate": 0.0,
+    "cells": [
+      {
+        "cell": "k000_ib_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.007940671990719,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ib_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.000937995452559,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ib_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.004550651025182,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ib_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.993832351953006,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ic_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.33964632175129,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ic_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.333428822093417,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ic_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.336709680891322,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ic_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.327330480571815,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ie_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.289268583369401,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ie_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.288827092974891,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ie_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.293824233713541,
+        "n_measured": 7
+      },
+      {
+        "cell": "k000_ie_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.27852728996276,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ib_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.626518608825866,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ib_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.308071231955611,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ib_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.313013018050288,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ib_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.29935302898413,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ic_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.05173068359899,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ic_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.985227235159124,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ic_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.989710431772709,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ic_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.976841271752942,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ie_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.865200968919817,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ie_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.809278722852541,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ie_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.814992282152598,
+        "n_measured": 7
+      },
+      {
+        "cell": "k025_ie_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.7975329662344794,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ib_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.437899811665594,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ib_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.3728442709832,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ib_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.378184821487496,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ib_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.359463335289134,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ic_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.548166085087567,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ic_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.131457286495884,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ic_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.139005856209081,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ic_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.114927180730037,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ie_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.282948959452425,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ie_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.0534746066025695,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ie_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.062113496530034,
+        "n_measured": 7
+      },
+      {
+        "cell": "k050_ie_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.032677734765407,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ib_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.000323141229031,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ib_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.924128909764352,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ib_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.927230996930469,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ib_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.905006714225493,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ic_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.199376246141122,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ic_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.086986216578565,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ic_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.090577744473375,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ic_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.064970637706079,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ie_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.219371862106734,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ie_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.842799721026268,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ie_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.849463739073662,
+        "n_measured": 7
+      },
+      {
+        "cell": "k075_ie_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.812899458832521,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ib_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.116823640515231,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ib_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.011309916439439,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ib_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.009092318501871,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ib_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.981968631380307,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ic_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.72325668975246,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ic_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.613252119566039,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ic_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.611155474552276,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ic_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 5.586298346148549,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ie_a0",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 7.199469754275066,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ie_al1",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.589916181266257,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ie_al2",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.591163417450917,
+        "n_measured": 7
+      },
+      {
+        "cell": "k100_ie_as",
+        "status": "ok",
+        "diverged": false,
+        "nis_mean": 6.545267990089161,
+        "n_measured": 7
+      }
+    ]
+  },
+  "ieks": null,
+  "primary_smoother": "eks"
+}

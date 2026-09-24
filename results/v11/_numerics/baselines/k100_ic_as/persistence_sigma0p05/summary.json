@@ -1,0 +1,25 @@
+{
+  "run_id": "persistence_sigma0p05",
+  "model": "persistence",
+  "arch": "analytic",
+  "curriculum": "none",
+  "noise": 0.05,
+  "seed": 0,
+  "profile": "full",
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "steps": 0,
+  "train_seconds": 0.0,
+  "n_parameters": 0,
+  "data_dir": "results/raw_k100",
+  "anchor_file": "results/v11/anchors/k100/As.npz",
+  "anchor": "As",
+  "influent_mode": "composite",
+  "ras_filter_window": 4,
+  "truth_preset": "bsm1_15c",
+  "alpha": 1.0,
+  "information": "anchor only"
+}
