@@ -1,0 +1,10 @@
+{
+  "out_dir": "results/v11/anchors/rand/04",
+  "anchors": {
+    "A0": {
+      "file": "results/v11/anchors/rand/04/A0.npz",
+      "rms_log_error_vs_truth0": 0.0,
+      "median_rel_std": 0.01
+    }
+  }
+}

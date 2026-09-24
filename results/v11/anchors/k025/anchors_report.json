@@ -1,0 +1,25 @@
+{
+  "out_dir": "results/v11/anchors/k025",
+  "anchors": {
+    "A0": {
+      "file": "results/v11/anchors/k025/A0.npz",
+      "rms_log_error_vs_truth0": 0.0,
+      "median_rel_std": 0.01
+    },
+    "As": {
+      "file": "results/v11/anchors/k025/As.npz",
+      "rms_log_error_vs_truth0": 0.10989439441650303,
+      "median_rel_std": 0.8812082266548353
+    },
+    "Al1": {
+      "file": "results/v11/anchors/k025/Al1.npz",
+      "rms_log_error_vs_truth0": 0.2565004071890693,
+      "median_rel_std": 0.723895202039332
+    },
+    "Al2": {
+      "file": "results/v11/anchors/k025/Al2.npz",
+      "rms_log_error_vs_truth0": 0.25563429667766946,
+      "median_rel_std": 0.7238952020393319
+    }
+  }
+}
