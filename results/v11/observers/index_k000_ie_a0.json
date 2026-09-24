@@ -1,0 +1,10 @@
+{
+  "config": "configs/observers/k000_ie_a0.yaml",
+  "results": [
+    {
+      "job": "k000_ie_a0/sigma0p10_r00_tuned",
+      "ok": true,
+      "seconds": 655.9076109000016
+    }
+  ]
+}

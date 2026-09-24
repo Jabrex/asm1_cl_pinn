@@ -1,0 +1,6 @@
+{
+  "q_soluble": 0.3,
+  "q_particulate": 0.3,
+  "q_criterion": "innovation",
+  "source": "results/v11/observers/k000_ie_a0/eks_sigma0p10/summary.json"
+}
