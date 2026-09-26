@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Practitioner guidance per never-measured state (majority class over the five tanks; the re-sampling interval is the start-up memory time rounded to whole days; probe loss and assay gain are mean information gains over the tanks, shown when at least 0.01). Source: results/v11/analysis/recoverability\_k050.json.}
+\label{tab:practitioner}
+\footnotesize
+\begin{tabular}{llllll}
+\toprule
+State & Recoverable & Probe that carries it & Assay that helps most & Re-sampling interval & Memory time (d) \\
+\midrule
+S\_I & partly (influent-driven) & none & none & influent analysis & 0.335 \\
+S\_S & partly (influent-driven) & none & SCOD (Al1) & influent analysis & 0.00661 \\
+X\_I & partly & none & none & 3 d & 3.46 \\
+X\_S & partly (influent-driven) & S\_O\_tank5 & respirometry (Al2) & influent analysis & 0.0534 \\
+X\_B\_H & partly & TSS\_tank5 & TSS (Al1) & 1 d & 0.533 \\
+X\_B\_A & partly & S\_O\_tank3 & respirometry (Al2) & 5 d & 4.65 \\
+X\_P & partly & TSS\_tank5 & none & 5 d & 4.63 \\
+S\_ND & partly & none & STKN (Al1) & 1 d & 0.00793 \\
+X\_ND & partly (influent-driven) & S\_NH\_tank5 & TSS (Al1) & influent analysis & 0.0292 \\
+S\_ALK & partly (influent-driven) & none & ALK (Al1) & influent analysis & 0.32 \\
+S\_N2 & partly & none & none & 1 d & 0.328 \\
+\bottomrule
+\end{tabular}
+\end{table}

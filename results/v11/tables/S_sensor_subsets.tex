@@ -1,0 +1,67 @@
+\begin{table}[t]
+\centering
+\caption{Sensor subsets: top ten and bottom five by Fisher information, and the confirmation runs. Source: results/v11/analysis/recoverability\_k100.json, results/v11/regime\_table.json.}
+\label{tab:si-sensors}
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+Kind & Channels or estimator & mean information gain & Track B NRMSE (R0) \\
+\midrule
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank2, S\_NO\_tank5, TSS\_tank5 & 0.149 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank2, TSS\_tank5 & 0.145 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank5, TSS\_tank5 & 0.143 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank2, S\_NO\_tank5, TSS\_tank5 & 0.141 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_O\_tank5, S\_NH\_tank5, TSS\_tank5 & 0.139 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank2, TSS\_tank5 & 0.136 & n/a \\
+Fisher ranking & S\_O\_tank4, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank2, S\_NO\_tank5, TSS\_tank5 & 0.136 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_NH\_tank5, S\_NO\_tank2, S\_NO\_tank5, TSS\_tank5 & 0.136 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank4, S\_O\_tank5, S\_NO\_tank2, S\_NO\_tank5, TSS\_tank5 & 0.135 & n/a \\
+Fisher ranking & S\_O\_tank3, S\_O\_tank5, S\_NH\_tank5, S\_NO\_tank5, TSS\_tank5 & 0.134 & n/a \\
+Fisher ranking & S\_NO\_tank2, S\_NO\_tank5 & 0.0476 & n/a \\
+Fisher ranking & S\_NO\_tank2 & 0.0382 & n/a \\
+Fisher ranking & S\_NO\_tank5 & 0.0336 & n/a \\
+Fisher ranking & TSS\_tank5 & 0.0326 & n/a \\
+Fisher ranking &  & 2.42e-17 & n/a \\
+achieved (K1 Ie A0 add-SCOD\_tank1) & ekf & n/a & 0.87 \\
+achieved (K1 Ie A0 add-SCOD\_tank1) & eks & n/a & 0.886 \\
+achieved (K1 Ie A0 add-SCOD\_tank5) & ekf & n/a & 0.863 \\
+achieved (K1 Ie A0 add-SCOD\_tank5) & eks & n/a & 0.872 \\
+achieved (K1 Ie A0 add-S\_NH\_tank1) & ekf & n/a & 0.867 \\
+achieved (K1 Ie A0 add-S\_NH\_tank1) & eks & n/a & 0.88 \\
+achieved (K1 Ie A0 add-S\_NH\_tank2) & ekf & n/a & 0.873 \\
+achieved (K1 Ie A0 add-S\_NH\_tank2) & eks & n/a & 0.886 \\
+achieved (K1 Ie A0 add-S\_NH\_tank3) & ekf & n/a & 1.07 \\
+achieved (K1 Ie A0 add-S\_NH\_tank3) & eks & n/a & 1.13 \\
+achieved (K1 Ie A0 add-S\_NH\_tank4) & cl\_pinn (two-seed) & n/a & 0.824 \\
+achieved (K1 Ie A0 add-S\_NH\_tank4) & ekf & n/a & 1.01 \\
+achieved (K1 Ie A0 add-S\_NH\_tank4) & eks & n/a & 1.06 \\
+achieved (K1 Ie A0 add-S\_NO\_tank1) & ekf & n/a & 0.848 \\
+achieved (K1 Ie A0 add-S\_NO\_tank1) & eks & n/a & 0.858 \\
+achieved (K1 Ie A0 add-S\_NO\_tank3) & ekf & n/a & 0.859 \\
+achieved (K1 Ie A0 add-S\_NO\_tank3) & eks & n/a & 0.871 \\
+achieved (K1 Ie A0 add-S\_NO\_tank4) & ekf & n/a & 0.851 \\
+achieved (K1 Ie A0 add-S\_NO\_tank4) & eks & n/a & 0.862 \\
+achieved (K1 Ie A0 add-TSS\_tank1) & ekf & n/a & 0.847 \\
+achieved (K1 Ie A0 add-TSS\_tank1) & eks & n/a & 0.858 \\
+achieved (K1 Ie A0 drop-DO) & ekf & n/a & 0.782 \\
+achieved (K1 Ie A0 drop-DO) & eks & n/a & 0.773 \\
+achieved (K1 Ie A0 drop-Nanalysers) & ekf & n/a & 0.875 \\
+achieved (K1 Ie A0 drop-Nanalysers) & eks & n/a & 0.901 \\
+achieved (K1 Ie A0 drop-S\_NH\_tank5) & ekf & n/a & 0.868 \\
+achieved (K1 Ie A0 drop-S\_NH\_tank5) & eks & n/a & 0.883 \\
+achieved (K1 Ie A0 drop-S\_NO\_tank2) & ekf & n/a & 1.13 \\
+achieved (K1 Ie A0 drop-S\_NO\_tank2) & eks & n/a & 1.16 \\
+achieved (K1 Ie A0 drop-S\_NO\_tank5) & ekf & n/a & 1.16 \\
+achieved (K1 Ie A0 drop-S\_NO\_tank5) & eks & n/a & 1.26 \\
+achieved (K1 Ie A0 drop-S\_O\_tank3) & ekf & n/a & 0.975 \\
+achieved (K1 Ie A0 drop-S\_O\_tank3) & eks & n/a & 1.01 \\
+achieved (K1 Ie A0 drop-S\_O\_tank4) & ekf & n/a & 0.849 \\
+achieved (K1 Ie A0 drop-S\_O\_tank4) & eks & n/a & 0.861 \\
+achieved (K1 Ie A0 drop-S\_O\_tank5) & ekf & n/a & 1 \\
+achieved (K1 Ie A0 drop-S\_O\_tank5) & eks & n/a & 1.05 \\
+achieved (K1 Ie A0 drop-TSS\_tank5) & cl\_pinn (two-seed) & n/a & 0.836 \\
+achieved (K1 Ie A0 drop-TSS\_tank5) & ekf & n/a & 0.84 \\
+achieved (K1 Ie A0 drop-TSS\_tank5) & eks & n/a & 0.856 \\
+\bottomrule
+\end{tabular}
+\end{table}

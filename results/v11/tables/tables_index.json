@@ -1,0 +1,133 @@
+{
+ "T1_information": {
+  "label": "tab:information",
+  "sources": [
+   "results/v11/analysis/kinetic_subset.json",
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 9
+ },
+ "T2_regimes": {
+  "label": "tab:regimes",
+  "sources": [
+   "results/v11/regime_table.json",
+   "PREREGISTRATION.md"
+  ],
+  "n_rows": 63
+ },
+ "T3_practitioner": {
+  "label": "tab:practitioner",
+  "sources": [
+   "results/v11/analysis/recoverability_k050.json"
+  ],
+  "n_rows": 11
+ },
+ "S_components_R0": {
+  "label": "tab:si-components-R0",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 1196
+ },
+ "S_components_F": {
+  "label": "tab:si-components-F",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 1196
+ },
+ "S_ekf": {
+  "label": "tab:si-ekf",
+  "sources": [
+   "results/v11/observers/*/*/summary.json via results/v11/regime_table.json"
+  ],
+  "n_rows": 1032
+ },
+ "S_realisations": {
+  "label": "tab:si-realisations",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 12
+ },
+ "S_random_mismatch": {
+  "label": "tab:si-random",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 10
+ },
+ "S_sigma_log": {
+  "label": "tab:si-sigmalog",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 30
+ },
+ "S_lab_seeds": {
+  "label": "tab:si-lab-seeds",
+  "sources": [
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 12
+ },
+ "S_sensor_subsets": {
+  "label": "tab:si-sensors",
+  "sources": [
+   "results/v11/analysis/recoverability_k100.json",
+   "results/v11/regime_table.json"
+  ],
+  "n_rows": 55
+ },
+ "S_lab_assays": {
+  "label": "tab:si-lab",
+  "sources": [
+   "results/v11/analysis/recoverability_k050.json"
+  ],
+  "n_rows": 7
+ },
+ "S_v10_superseded": {
+  "label": "tab:si-v10",
+  "sources": [
+   "results\\seed_bands.json",
+   "results\\benchmark_detail.json"
+  ],
+  "n_rows": 6
+ },
+ "S_run_counts": {
+  "label": "tab:si-counts",
+  "sources": [
+   "results/runs",
+   "results/runs_seed1",
+   "results/runs_seed2",
+   "results/runs_ablation",
+   "results/runs_flowonly",
+   "results/runs_icmask",
+   "results\\v11",
+   "results\\v11\\gpu_ledger.csv"
+  ],
+  "n_rows": 24
+ },
+ "S_hypotheses": {
+  "label": "tab:si-hypotheses",
+  "sources": [
+   "results/v11/regime_table.json",
+   "results/v11/analysis/validation/recoverability_validation.json"
+  ],
+  "n_rows": 7
+ },
+ "S_derivative_audit": {
+  "label": "tab:si-derivative-audit",
+  "sources": [
+   "results\\v11\\derivative_audit.json"
+  ],
+  "n_rows": 144
+ },
+ "S_bsm1_gate": {
+  "label": "tab:si-bsm1-gate",
+  "sources": [
+   "results\\v11\\bsm1_gate.json"
+  ],
+  "n_rows": 65
+ }
+}
