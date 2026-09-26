@@ -57,6 +57,14 @@
     }
    }
   },
+  "files": [
+   "fig2a_recoverability_classes.png",
+   "fig2a_recoverability_classes.pdf",
+   "fig2b_memory_time.png",
+   "fig2b_memory_time.pdf",
+   "fig2c_index_vs_error.png",
+   "fig2c_index_vs_error.pdf"
+  ],
   "index_display_floor": 0.0001,
   "class_counts": {
    "sensor-recoverable": 1,
@@ -66,6 +74,12 @@
   }
  },
  "fig3": {
+  "files": [
+   "fig3a_ladder_R0.png",
+   "fig3a_ladder_R0.pdf",
+   "fig3b_ladder_F.png",
+   "fig3b_ladder_F.pdf"
+  ],
   "persistence": {
    "R0": {
     "median": 0.25266394804301395,
@@ -714,6 +728,16 @@
      "muA": 0.13356016497970968
     }
    }
+  ],
+  "files": [
+   "fig4a_mismatch_R0.png",
+   "fig4a_mismatch_R0.pdf",
+   "fig4b_mismatch_F.png",
+   "fig4b_mismatch_F.pdf",
+   "fig4_legend.png",
+   "fig4_legend.pdf",
+   "fig4c_parameter_recovery.png",
+   "fig4c_parameter_recovery.pdf"
   ]
  },
  "fig5": {
@@ -797,6 +821,27 @@
     "eks": 0.1296815425561372,
     "cl_pinn": 0.13305492428707266
    }
-  }
+  },
+  "c_counts": {
+   "sensor-recoverable": 1,
+   "partly recoverable": 27,
+   "forcing-slaved": 27,
+   "anchor-carried": 0
+  },
+  "files": [
+   "fig5a_influent_kinetics.png",
+   "fig5a_influent_kinetics.pdf",
+   "fig5b_start_state_tiers.png",
+   "fig5b_start_state_tiers.pdf",
+   "fig5c_recoverability_class.png",
+   "fig5c_recoverability_class.pdf",
+   "fig5_legend.png",
+   "fig5_legend.pdf"
+  ]
+ },
+ "layout": {
+  "column_in": 3.3464566929133857,
+  "double_in": 7.0078740157480315,
+  "note": "each file is drawn at its printed width; include it at natural size"
  }
 }
