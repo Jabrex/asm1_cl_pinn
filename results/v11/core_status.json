@@ -1,0 +1,248 @@
+{
+  "passed": true,
+  "ledger_total_eq": 41.25,
+  "hard_cap": 50.0,
+  "counts": {
+    "ok": 39,
+    "failed_numeric": 0,
+    "error_logged": 0,
+    "error_unlogged": 0,
+    "missing": 0
+  },
+  "runs": {
+    "results/v11/pinn/k000_ie_a0_seed0/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed0/pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed1/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed1/pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed2/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed2/pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ic_a0_seed0/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ic_a0_seed1/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ic_a0_seed2/cl_pinn_sigma0p10": {
+      "phase": "E4",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ie_a0_seed0/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ie_a0_seed1/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ie_a0_seed2/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed0/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed1/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed2/cl_pinn_sigma0p10": {
+      "phase": "E5",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_a0_seed0/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_a0_seed1/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_a0_seed2/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed0/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed1/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed2/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_al1_seed0/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_al1_seed1/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_al1_seed2/cl_pinn_sigma0p10": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed0/cl_pinn_sigma0p05": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed0/cl_pinn_sigma0p15": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed1/cl_pinn_sigma0p05": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed1/cl_pinn_sigma0p15": {
+      "phase": "E6",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed0/lstm_sigma0p10": {
+      "phase": "E6",
+      "model": "lstm",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed1/lstm_sigma0p10": {
+      "phase": "E6",
+      "model": "lstm",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k050_ic_as_seed2/lstm_sigma0p10": {
+      "phase": "E6",
+      "model": "lstm",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed0/cl_pinn_theta_sigma0p10": {
+      "phase": "E7",
+      "model": "cl_pinn_theta",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed1/cl_pinn_theta_sigma0p10": {
+      "phase": "E7",
+      "model": "cl_pinn_theta",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed2/cl_pinn_theta_sigma0p10": {
+      "phase": "E7",
+      "model": "cl_pinn_theta",
+      "seed": 2,
+      "status": "ok"
+    },
+    "results/v11/pinn/k000_ie_a0_seed0/cl_pinn_theta_sigma0p10": {
+      "phase": "E7",
+      "model": "cl_pinn_theta",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed0/cl_pinn_sigma0p10_drop-TSS_tank5": {
+      "phase": "E3",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed0/cl_pinn_sigma0p10_add-S_NH_tank4": {
+      "phase": "E3",
+      "model": "cl_pinn",
+      "seed": 0,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed1/cl_pinn_sigma0p10_drop-TSS_tank5": {
+      "phase": "E3",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    },
+    "results/v11/pinn/k100_ie_a0_seed1/cl_pinn_sigma0p10_add-S_NH_tank4": {
+      "phase": "E3",
+      "model": "cl_pinn",
+      "seed": 1,
+      "status": "ok"
+    }
+  }
+}

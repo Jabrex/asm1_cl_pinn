@@ -1,0 +1,10 @@
+{
+  "config": "configs/observers/grid/sensors/k100_ie_a0_add-S_NO_tank4.yaml",
+  "results": [
+    {
+      "job": "k100_ie_a0_add-S_NO_tank4/sigma0p10_r00_tuned",
+      "ok": true,
+      "seconds": 2941.327283999999
+    }
+  ]
+}

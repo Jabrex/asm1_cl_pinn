@@ -1,0 +1,45 @@
+{
+  "config": "configs/observers/grid/main/k100_ic_al1.yaml",
+  "results": [
+    {
+      "job": "k100_ic_al1/sigma0p00_r00_tuned",
+      "ok": true,
+      "seconds": 2576.77760869998
+    },
+    {
+      "job": "k100_ic_al1/sigma0p00_r00_frozen",
+      "ok": true,
+      "seconds": 153.47224009997444
+    },
+    {
+      "job": "k100_ic_al1/sigma0p05_r00_tuned",
+      "ok": true,
+      "seconds": 2835.710158800008
+    },
+    {
+      "job": "k100_ic_al1/sigma0p05_r00_frozen",
+      "ok": true,
+      "seconds": 152.10677150002448
+    },
+    {
+      "job": "k100_ic_al1/sigma0p10_r00_tuned",
+      "ok": true,
+      "seconds": 3021.8953029999975
+    },
+    {
+      "job": "k100_ic_al1/sigma0p10_r00_frozen",
+      "ok": true,
+      "seconds": 153.09981389995664
+    },
+    {
+      "job": "k100_ic_al1/sigma0p15_r00_tuned",
+      "ok": true,
+      "seconds": 3037.915222700045
+    },
+    {
+      "job": "k100_ic_al1/sigma0p15_r00_frozen",
+      "ok": true,
+      "seconds": 151.2090686999727
+    }
+  ]
+}

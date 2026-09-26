@@ -1,0 +1,15 @@
+{
+  "config": "configs/observers/grid/main/k100_ic_a0.yaml",
+  "results": [
+    {
+      "job": "k100_ic_a0/sigma0p10_r00_tuned",
+      "ok": true,
+      "seconds": 2943.228446300025
+    },
+    {
+      "job": "k100_ic_a0/sigma0p10_r00_frozen",
+      "ok": true,
+      "seconds": 152.0664461000124
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "run_id": "eks_aug_frozenq_sigma0p15",
+  "model": "eks_aug_frozenq",
+  "arch": "observer",
+  "curriculum": "none",
+  "noise": 0.15,
+  "seed": 0,
+  "profile": "full",
+  "steps": 0,
+  "train_seconds": 195.09306919999653,
+  "n_parameters": 0,
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "cell": "k000_ie_a0",
+  "data_dir": "results/raw",
+  "truth_preset": "vault20",
+  "alpha": 1.0,
+  "anchor": "A0",
+  "anchor_file": "results/v11/anchors/k000/A0.npz",
+  "spec": {
+    "estimators": [
+      "ekf",
+      "eks",
+      "ekf_aug",
+      "eks_aug",
+      "ekf_online",
+      "ieks"
+    ],
+    "influent_mode": "exact",
+    "ras_filter_window": 4,
+    "ras_mode": "measured",
+    "train_end_day": 12.0,
+    "holdout_days": [
+      12.0,
+      14.0
+    ],
+    "q_mode": "frozen",
+    "q_fixed": [
+      0.3,
+      0.3
+    ],
+    "q_criterion": "innovation",
+    "q_grid": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0
+    ],
+    "augment": [
+      "kh",
+      "etag",
+      "bH",
+      "muA"
+    ],
+    "q_theta": 0.001,
+    "theta_prior_sd": 0.693,
+    "target_channels": null,
+    "r_mode": "data",
+    "r_floor": 0.01,
+    "substeps": 3,
+    "rain": true
+  },
+  "vault_json_sha256": "06f7bfd5ce5703f5745cc0565858fc147012e68b3e28fdca64a126e6ed7074a2",
+  "loglik": 2951.6141586838844,
+  "diverged": false,
+  "seconds": 22.332650700001977,
+  "nis_mean": 7.152356371548685,
+  "nis_median": 6.368648066312182,
+  "n_channels": 7,
+  "multipliers": {
+    "names": [
+      "kh",
+      "etag",
+      "bH",
+      "muA"
+    ],
+    "filtered_end": [
+      1.1014052597061936,
+      0.9013239210446155,
+      1.236161970587818,
+      0.9696650573667385
+    ],
+    "filtered_end_log_sd": [
+      0.015602453090924845,
+      0.015105437891520211,
+      0.02085267483947642,
+      0.03139039735505384
+    ],
+    "smoothed_start": [
+      1.100481765121809,
+      0.9013058940404775,
+      1.2358562604407475,
+      0.9696799813201349
+    ]
+  },
+  "rain_diverged": false,
+  "q_mode": "frozen",
+  "q_soluble": 0.3,
+  "q_particulate": 0.3,
+  "q_criterion": null,
+  "q_on_grid_edge": null,
+  "q_table": null,
+  "q_tune_seconds": 7.299997378140688e-06,
+  "r": [
+    0.021926040270458084,
+    0.021773144959556765,
+    0.02328479982849098,
+    0.025605467539295813,
+    0.03176096919423442,
+    0.021549748356147126,
+    0.022133277125463494
+  ],
+  "ras_log_var": 0.005760954543144622,
+  "channels": [
+    "S_O_tank3",
+    "S_O_tank4",
+    "S_O_tank5",
+    "S_NH_tank5",
+    "S_NO_tank2",
+    "S_NO_tank5",
+    "TSS_tank5"
+  ],
+  "estimator": "eks_aug",
+  "information": "same-information",
+  "rain_information": "more-information (rain data assimilated)",
+  "finite": true,
+  "n_measured": 7,
+  "selected_q": {
+    "q_soluble": 0.3,
+    "q_particulate": 0.3
+  },
+  "realisation": 0,
+  "influent_mode": "exact",
+  "ras_input": "filtered",
+  "learned_multipliers": {
+    "kh": 1.1014052597061936,
+    "etag": 0.9013239210446155,
+    "bH": 1.236161970587818,
+    "muA": 0.9696650573667385
+  }
+}

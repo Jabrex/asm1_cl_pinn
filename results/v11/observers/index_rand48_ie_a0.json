@@ -1,0 +1,10 @@
+{
+  "config": "configs/observers/grid/random/rand48_ie_a0.yaml",
+  "results": [
+    {
+      "job": "rand48_ie_a0/sigma0p10_r00_tuned",
+      "ok": true,
+      "seconds": 2854.0379143000464
+    }
+  ]
+}

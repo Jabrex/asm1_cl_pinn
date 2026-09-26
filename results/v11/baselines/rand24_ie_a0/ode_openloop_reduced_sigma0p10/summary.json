@@ -1,0 +1,25 @@
+{
+  "run_id": "ode_openloop_reduced_sigma0p10",
+  "model": "ode_openloop_reduced",
+  "arch": "analytic",
+  "curriculum": "none",
+  "noise": 0.1,
+  "seed": 0,
+  "profile": "full",
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "steps": 0,
+  "train_seconds": 103.54490849998547,
+  "n_parameters": 0,
+  "data_dir": "results/raw_rand/24",
+  "anchor_file": "results/v11/anchors/rand/24/A0.npz",
+  "anchor": "A0",
+  "influent_mode": "exact",
+  "ras_filter_window": 4,
+  "truth_preset": "perturbed",
+  "alpha": null,
+  "information": "information-matched"
+}

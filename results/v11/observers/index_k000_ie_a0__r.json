@@ -1,0 +1,50 @@
+{
+  "config": "configs/observers/grid/realisations/k000_ie_a0__r.yaml",
+  "results": [
+    {
+      "job": "k000_ie_a0/sigma0p10_r01_tuned",
+      "ok": true,
+      "seconds": 2723.4179943999625
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r02_tuned",
+      "ok": true,
+      "seconds": 2720.8163768000086
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r03_tuned",
+      "ok": true,
+      "seconds": 2722.999012000044
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r04_tuned",
+      "ok": true,
+      "seconds": 2713.778759500012
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r05_tuned",
+      "ok": true,
+      "seconds": 2719.30865359999
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r06_tuned",
+      "ok": true,
+      "seconds": 2718.175341199967
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r07_tuned",
+      "ok": true,
+      "seconds": 2718.3671396999853
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r08_tuned",
+      "ok": true,
+      "seconds": 2724.07522649999
+    },
+    {
+      "job": "k000_ie_a0/sigma0p10_r09_tuned",
+      "ok": true,
+      "seconds": 2719.463505099993
+    }
+  ]
+}

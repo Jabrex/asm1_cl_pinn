@@ -1,0 +1,115 @@
+{
+  "run_id": "eks_frozenq_sigma0p05",
+  "model": "eks_frozenq",
+  "arch": "observer",
+  "curriculum": "none",
+  "noise": 0.05,
+  "seed": 0,
+  "profile": "full",
+  "steps": 0,
+  "train_seconds": 184.5428702000063,
+  "n_parameters": 0,
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "cell": "k000_ie_a0",
+  "data_dir": "results/raw",
+  "truth_preset": "vault20",
+  "alpha": 1.0,
+  "anchor": "A0",
+  "anchor_file": "results/v11/anchors/k000/A0.npz",
+  "spec": {
+    "estimators": [
+      "ekf",
+      "eks",
+      "ekf_aug",
+      "eks_aug",
+      "ekf_online",
+      "ieks"
+    ],
+    "influent_mode": "exact",
+    "ras_filter_window": 4,
+    "ras_mode": "measured",
+    "train_end_day": 12.0,
+    "holdout_days": [
+      12.0,
+      14.0
+    ],
+    "q_mode": "frozen",
+    "q_fixed": [
+      0.3,
+      0.3
+    ],
+    "q_criterion": "innovation",
+    "q_grid": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0
+    ],
+    "augment": [
+      "kh",
+      "etag",
+      "bH",
+      "muA"
+    ],
+    "q_theta": 0.001,
+    "theta_prior_sd": 0.693,
+    "target_channels": null,
+    "r_mode": "data",
+    "r_floor": 0.01,
+    "substeps": 3,
+    "rain": true
+  },
+  "vault_json_sha256": "06f7bfd5ce5703f5745cc0565858fc147012e68b3e28fdca64a126e6ed7074a2",
+  "loglik": 9696.323956470977,
+  "diverged": false,
+  "seconds": 18.97745439998107,
+  "nis_mean": 7.34806213620504,
+  "nis_median": 6.490255226565727,
+  "n_channels": 7,
+  "rain_diverged": false,
+  "q_mode": "frozen",
+  "q_soluble": 0.3,
+  "q_particulate": 0.3,
+  "q_criterion": null,
+  "q_on_grid_edge": null,
+  "q_table": null,
+  "q_tune_seconds": 8.700008038431406e-06,
+  "r": [
+    0.0028066332606942333,
+    0.00247907520292256,
+    0.0029355828324164218,
+    0.003980896949701221,
+    0.008654013169248543,
+    0.0033670141691263997,
+    0.002437404878579491
+  ],
+  "ras_log_var": 0.000628371141137812,
+  "channels": [
+    "S_O_tank3",
+    "S_O_tank4",
+    "S_O_tank5",
+    "S_NH_tank5",
+    "S_NO_tank2",
+    "S_NO_tank5",
+    "TSS_tank5"
+  ],
+  "estimator": "eks",
+  "information": "same-information",
+  "rain_information": "more-information (rain data assimilated)",
+  "finite": true,
+  "n_measured": 7,
+  "selected_q": {
+    "q_soluble": 0.3,
+    "q_particulate": 0.3
+  },
+  "realisation": 0,
+  "influent_mode": "exact",
+  "ras_input": "filtered"
+}

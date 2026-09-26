@@ -1,0 +1,8 @@
+{
+  "profile": "full",
+  "succeeded": [
+    "cl_pinn_sigma0p10"
+  ],
+  "failed": [],
+  "sweep_seconds": 930.9053304999834
+}

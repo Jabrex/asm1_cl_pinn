@@ -1,0 +1,504 @@
+{
+  "run_id": "ekf_online_sigma0p10",
+  "model": "ekf_online",
+  "arch": "observer",
+  "curriculum": "none",
+  "noise": 0.1,
+  "seed": 0,
+  "profile": "full",
+  "steps": 0,
+  "train_seconds": 2409.881611699995,
+  "n_parameters": 0,
+  "train_end_day": 12.0,
+  "holdout_days": [
+    12.0,
+    14.0
+  ],
+  "cell": "k025_ic_a0",
+  "data_dir": "results/raw_k025",
+  "truth_preset": "graded",
+  "alpha": 0.25,
+  "anchor": "A0",
+  "anchor_file": "results/v11/anchors/k025/A0.npz",
+  "spec": {
+    "estimators": [
+      "ekf",
+      "eks",
+      "ekf_aug",
+      "eks_aug",
+      "ekf_online"
+    ],
+    "influent_mode": "composite",
+    "ras_filter_window": 4,
+    "ras_mode": "measured",
+    "train_end_day": 12.0,
+    "holdout_days": [
+      12.0,
+      14.0
+    ],
+    "q_mode": "tuned",
+    "q_fixed": null,
+    "q_criterion": "innovation",
+    "q_grid": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0
+    ],
+    "augment": [
+      "kh",
+      "etag",
+      "bH",
+      "muA"
+    ],
+    "q_theta": 0.001,
+    "theta_prior_sd": 0.693,
+    "target_channels": null,
+    "r_mode": "data",
+    "r_floor": 0.01,
+    "substeps": 3,
+    "rain": true
+  },
+  "vault_json_sha256": "06f7bfd5ce5703f5745cc0565858fc147012e68b3e28fdca64a126e6ed7074a2",
+  "loglik": 6027.792414248247,
+  "diverged": false,
+  "seconds": 32.333743800001685,
+  "nis_mean": 6.035446180422293,
+  "nis_median": 5.227976964283558,
+  "n_channels": 7,
+  "rain_diverged": false,
+  "q_mode": "tuned",
+  "q_soluble": 1.0,
+  "q_particulate": 0.3,
+  "q_criterion": "innovation",
+  "q_on_grid_edge": false,
+  "q_table": [
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 0.003,
+      "loglik": -10029.150934878675,
+      "nis_mean": 35.14496663215353,
+      "predictive_score": 8.893704912888845,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 0.01,
+      "loglik": -9361.41088799166,
+      "nis_mean": 33.97812652454555,
+      "predictive_score": 8.899138387598743,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 0.03,
+      "loglik": -7390.86513916696,
+      "nis_mean": 30.527692480315594,
+      "predictive_score": 8.66285404617795,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 0.1,
+      "loglik": -821.494992200565,
+      "nis_mean": 18.98624622756103,
+      "predictive_score": 6.8504359968966435,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 0.3,
+      "loglik": 3954.92514597864,
+      "nis_mean": 10.140744324994975,
+      "predictive_score": 6.561167206025007,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 1.0,
+      "loglik": 5114.431970119069,
+      "nis_mean": 5.568765911441644,
+      "predictive_score": 6.80058024747103,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.003,
+      "q_particulate": 3.0,
+      "loglik": 2971.439149919695,
+      "nis_mean": 2.8899658263754273,
+      "predictive_score": 8.960583497558046,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 0.003,
+      "loglik": -9657.242517665207,
+      "nis_mean": 34.49854342393895,
+      "predictive_score": 8.84387558665323,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 0.01,
+      "loglik": -9002.488570677824,
+      "nis_mean": 33.35442353040654,
+      "predictive_score": 8.823879246352934,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 0.03,
+      "loglik": -7103.026337346432,
+      "nis_mean": 30.027459670741518,
+      "predictive_score": 8.589042613660922,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 0.1,
+      "loglik": -759.2527306866502,
+      "nis_mean": 18.877546911759644,
+      "predictive_score": 6.833830782768271,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 0.3,
+      "loglik": 3958.2158920571333,
+      "nis_mean": 10.134606129034688,
+      "predictive_score": 6.558681131926883,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 1.0,
+      "loglik": 5114.455256566047,
+      "nis_mean": 5.568514319524068,
+      "predictive_score": 6.8001508766021646,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.01,
+      "q_particulate": 3.0,
+      "loglik": 2971.41453937648,
+      "nis_mean": 2.8898968863003183,
+      "predictive_score": 8.960527161238092,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 0.003,
+      "loglik": -7308.768579248671,
+      "nis_mean": 30.414761357806277,
+      "predictive_score": 8.535889506778512,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 0.01,
+      "loglik": -6694.645851309323,
+      "nis_mean": 29.34219950015325,
+      "predictive_score": 8.347549424836895,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 0.03,
+      "loglik": -5203.332647501541,
+      "nis_mean": 26.72433795134634,
+      "predictive_score": 8.104355098051238,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 0.1,
+      "loglik": -282.5528522433132,
+      "nis_mean": 18.044387510724896,
+      "predictive_score": 6.709531974585794,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 0.3,
+      "loglik": 3986.4213335881227,
+      "nis_mean": 10.081918695551117,
+      "predictive_score": 6.537309847125537,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 1.0,
+      "loglik": 5114.658036009427,
+      "nis_mean": 5.566307357469993,
+      "predictive_score": 6.79638198410461,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.03,
+      "q_particulate": 3.0,
+      "loglik": 2971.198149196985,
+      "nis_mean": 2.8892911701756683,
+      "predictive_score": 8.960031710069448,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 0.003,
+      "loglik": -998.982109685592,
+      "nis_mean": 19.392794281188973,
+      "predictive_score": 7.673934510708215,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 0.01,
+      "loglik": -497.96111498718517,
+      "nis_mean": 18.51880780474873,
+      "predictive_score": 7.144414070901648,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 0.03,
+      "loglik": 209.64049455845944,
+      "nis_mean": 17.265052995046076,
+      "predictive_score": 6.779857729942046,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 0.1,
+      "loglik": 1951.0527023853156,
+      "nis_mean": 14.11000260911333,
+      "predictive_score": 6.221423510626177,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 0.3,
+      "loglik": 4237.902911941303,
+      "nis_mean": 9.604888790731302,
+      "predictive_score": 6.342615590434504,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 1.0,
+      "loglik": 5116.730570629785,
+      "nis_mean": 5.541791613004307,
+      "predictive_score": 6.754227706835325,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.1,
+      "q_particulate": 3.0,
+      "loglik": 2968.7318992002497,
+      "nis_mean": 2.8824446931479444,
+      "predictive_score": 8.954375531253831,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 0.003,
+      "loglik": 3322.7654050616984,
+      "nis_mean": 11.514941017141803,
+      "predictive_score": 7.323090460678375,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 0.01,
+      "loglik": 3555.366503061518,
+      "nis_mean": 11.109127945287874,
+      "predictive_score": 6.788569955060052,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 0.03,
+      "loglik": 3863.255155658003,
+      "nis_mean": 10.557488122853124,
+      "predictive_score": 6.254572836476542,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 0.1,
+      "loglik": 4244.628965699426,
+      "nis_mean": 9.787927163646817,
+      "predictive_score": 6.072747625956984,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 0.3,
+      "loglik": 4934.938196958874,
+      "nis_mean": 8.111727115149545,
+      "predictive_score": 5.776461297431016,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 1.0,
+      "loglik": 5121.790863095728,
+      "nis_mean": 5.361242591888942,
+      "predictive_score": 6.432061990175952,
+      "diverged": false
+    },
+    {
+      "q_soluble": 0.3,
+      "q_particulate": 3.0,
+      "loglik": 2946.7574431289245,
+      "nis_mean": 2.825206942058431,
+      "predictive_score": 8.904508305406729,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 0.003,
+      "loglik": 4579.8042959304275,
+      "nis_mean": 7.519664005996288,
+      "predictive_score": 7.325329661192347,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 0.01,
+      "loglik": 4705.3616467087195,
+      "nis_mean": 7.303387307814015,
+      "predictive_score": 7.080660227451676,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 0.03,
+      "loglik": 4855.38704020786,
+      "nis_mean": 7.034608618422186,
+      "predictive_score": 6.386035697321158,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 0.1,
+      "loglik": 4994.710643223485,
+      "nis_mean": 6.718763292314886,
+      "predictive_score": 6.018994478060811,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 0.3,
+      "loglik": 5159.657153121062,
+      "nis_mean": 6.05173068359899,
+      "predictive_score": 5.462865674520879,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 1.0,
+      "loglik": 4889.106356750835,
+      "nis_mean": 4.441378279618038,
+      "predictive_score": 5.05194514421415,
+      "diverged": false
+    },
+    {
+      "q_soluble": 1.0,
+      "q_particulate": 3.0,
+      "loglik": 2712.1812906011655,
+      "nis_mean": 2.4019035847928913,
+      "predictive_score": 8.33849554509912,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 0.003,
+      "loglik": 3251.6994869170717,
+      "nis_mean": 4.430245690357215,
+      "predictive_score": 7.486309665136964,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 0.01,
+      "loglik": 3354.276523263885,
+      "nis_mean": 4.262539231852318,
+      "predictive_score": 7.429261482260802,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 0.03,
+      "loglik": 3457.718082726221,
+      "nis_mean": 4.0895037434021795,
+      "predictive_score": 7.113307556221937,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 0.1,
+      "loglik": 3554.0168179331213,
+      "nis_mean": 3.8905786881957978,
+      "predictive_score": 6.283944891103932,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 0.3,
+      "loglik": 3632.5580645653895,
+      "nis_mean": 3.5104992828602595,
+      "predictive_score": 5.782769606094117,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 1.0,
+      "loglik": 3252.354168504576,
+      "nis_mean": 2.698654680447966,
+      "predictive_score": 4.604525834422196,
+      "diverged": false
+    },
+    {
+      "q_soluble": 3.0,
+      "q_particulate": 3.0,
+      "loglik": 1322.870548749628,
+      "nis_mean": 1.431168742665017,
+      "predictive_score": 5.62048682620509,
+      "diverged": false
+    }
+  ],
+  "q_tune_seconds": 2274.196042500029,
+  "r": [
+    0.010152001630100714,
+    0.010563986889130956,
+    0.012383035030893714,
+    0.014124003151240435,
+    0.02036343395544108,
+    0.01052704024987559,
+    0.00971639366307094
+  ],
+  "ras_log_var": 0.002507231194502634,
+  "channels": [
+    "S_O_tank3",
+    "S_O_tank4",
+    "S_O_tank5",
+    "S_NH_tank5",
+    "S_NO_tank2",
+    "S_NO_tank5",
+    "TSS_tank5"
+  ],
+  "estimator": "ekf_online",
+  "information": "more-information",
+  "rain_information": "more-information (rain data assimilated)",
+  "finite": true,
+  "n_measured": 7,
+  "selected_q": {
+    "q_soluble": 1.0,
+    "q_particulate": 0.3
+  },
+  "realisation": 0,
+  "influent_mode": "composite",
+  "ras_input": "filtered"
+}
