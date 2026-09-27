@@ -1,4 +1,4 @@
-**Per-component NRMSE (fixed R0 range), window R0, sigma 0.10, median over the n seeds (two-seed and one-seed PINN rows labelled, Section 9).** (results/v11/regime_table.json)
+**Per-component NRMSE (fixed R0 range), window R0, sigma 0.10, median over the n seeds (two-seed and one-seed PINN rows labeled, Section 9).** (results/v11/regime_table.json)
 
 | Cell | Estimator | n | label | S_I | S_S | X_I | X_S | X_B_H | X_B_A | X_P | S_ND | X_ND | S_ALK | S_N2 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
-**Noise realisation 0 (the registered comparison) next to the spread over realisations 1-9, which is reported beside it and never pooled with it (Sections 2 and 9).** (results/v11/regime_table.json)
+**Noise realization 0 (the registered comparison) next to the spread over realizations 1-9, which is reported beside it and never pooled with it (Sections 2 and 9).** (results/v11/regime_table.json)
 
-| Cell | sigma | Estimator | Window | realisation 0 | n (1-9) | median | p25 | p75 | min | max | r0 outside |
+| Cell | sigma | Estimator | Window | realization 0 | n (1-9) | median | p25 | p75 | min | max | r0 outside |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | K0 Ie A0 | 0.1 | ekf | F | 0.212 | 9 | 0.22 | 0.188 | 0.238 | 0.157 | 0.247 | no |
 | K0 Ie A0 | 0.1 | ekf | R0 | 0.233 | 9 | 0.237 | 0.231 | 0.25 | 0.195 | 0.259 | no |
