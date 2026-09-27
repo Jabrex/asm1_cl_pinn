@@ -1,8 +1,0 @@
-{
-  "profile": "full",
-  "succeeded": [
-    "lstm_sigma0p10"
-  ],
-  "failed": [],
-  "sweep_seconds": 413.47160980000626
-}

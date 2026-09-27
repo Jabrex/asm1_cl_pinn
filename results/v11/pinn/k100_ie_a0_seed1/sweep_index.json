@@ -1,9 +1,0 @@
-{
-  "profile": "full",
-  "succeeded": [
-    "cl_pinn_sigma0p10_drop-TSS_tank5",
-    "cl_pinn_sigma0p10_add-S_NH_tank4"
-  ],
-  "failed": [],
-  "sweep_seconds": 1959.0083378999843
-}

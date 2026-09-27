@@ -1,8 +1,0 @@
-{
-  "profile": "full",
-  "succeeded": [
-    "cl_pinn_theta_sigma0p10"
-  ],
-  "failed": [],
-  "sweep_seconds": 935.3335731999832
-}
